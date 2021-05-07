@@ -1,2 +1,3 @@
-# PythonPractise1
-Coding practise from A Practical Introduction to Python Programming
+# PythonPractiseSerie-1
+Coding practises from A Practical Introduction to Python Programming
+Looking for better codes
