@@ -1,0 +1,15 @@
+#求分数对应的小数某个数位数值
+
+n=eval(input('Enter numerator:'))
+d=eval(input('Enter denominator:'))
+a=eval(input('Enter digit to check:'))
+
+#使用while循环实现模拟除法计算过程
+L=[] #记录商的各位数值
+i=0
+while i<=a:
+  r=n//d
+  Lf.append(r)
+  i=i+1
+  n=n%d*10
+print('Digit value:',L[a])
