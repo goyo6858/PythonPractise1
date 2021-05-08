@@ -1,0 +1,19 @@
+#Ch9-P19 生成随机的9*9数字列表（数字范围1-9），要求行列中数字都不重复（通过while循环实现）
+
+from random import randint
+from pprint import pprint
+
+'''
+#生成一个1维列表
+c=9 #初始化频率计数（从最高可能开始以便while循环可以执行）
+while c>1:
+  C=[] #频率计数
+  L=[[randint(1,9) for i in range(9)] for i in range(9)]
+  for k in range(9):
+    for l in L[k]:
+      C.append(L.count(l))
+  L1=[[L[r][n] for r in range(9)] for n in range(9)]
+  c=max(C)
+pprint(L)
+pprint(L1)
+...
