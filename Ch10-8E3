@@ -1,0 +1,7 @@
+#Ch10.8 Example 3 解二次方程
+
+for x in range(1,101):
+  for y in range(1,101):
+    for z in range(1,101):
+      if x**2+y**2==z**2:
+        print('x =',x,'\ny =',y,'\nz =',z)
