@@ -3,8 +3,6 @@
 from random import randint
 from pprint import pprint
 
-'''
-#生成一个1维列表
 c=9 #初始化频率计数（从最高可能开始以便while循环可以执行）
 while c>1:
   C=[] #频率计数
@@ -16,4 +14,4 @@ while c>1:
   c=max(C)
 pprint(L)
 pprint(L1)
-...
+
