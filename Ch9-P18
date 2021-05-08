@@ -1,0 +1,16 @@
+#随机产生6*6列表，其中包含12个1，其余元素为0（通过while循环实现）
+
+from random import randint
+from pprint import pprint
+
+L=[] #目标列表初始化
+#L1=[] #'1'元素计数用列表初始化（不需要初始化）
+
+i=0 #‘1’计数
+while i！=12:
+  L1=[] #循环结束后如果‘1’元素不是12个则复位列表
+  L=[[randint(0,1) for k in range(6)] for l in range(6)] #生成随机列表
+  for j in range(6):
+    L1.append(L[j].count(1)) #计数各子列表中的‘1’元素
+  i=sum(L1) #计数求和
+pprint(L)
