@@ -10,7 +10,10 @@ while c>1:
   for k in range(9):
     for l in L[k]:
       C.append(L.count(l))
-  L1=[[L[r][n] for r in range(9)] for n in range(9)]
+  L1=[[L[r][n] for r in range(9)] for n in range(9)] #转换L的维度
+  for m in range(9):
+    for n in L1[m]:
+      C.append(L1.count(n))
   c=max(C)
 pprint(L)
 pprint(L1)
