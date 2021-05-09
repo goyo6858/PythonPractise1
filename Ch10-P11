@@ -1,0 +1,17 @@
+#Ch10-P11 6位数回文与关系
+
+a=0 #记录变量初始化
+L=[] #记录所有回文数对
+
+for i in range(100000,1000000):
+  L1=[] #记录满足关系回文数对，在循环开始复位
+  b=a 
+  s=str(i) #转换为字符串
+  sr=s[ : :-1] #倒序
+  if s==sr:
+    a=i
+    if a-b<20:
+      L1.append(b)
+      L1.append(a)
+      L.append(L1)
+print(L)
