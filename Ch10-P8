@@ -1,0 +1,10 @@
+#Ch10-P8 找数字
+
+L=[]
+for i in range(1,1001):
+  if i%7==0:
+    s=str(i)
+    if s[-1]=='6':
+      n=int(s)
+      L.append(n)
+print(L)
