@@ -1,0 +1,33 @@
+#Ch10-P3 字母排序
+
+w=input('Enter a word:')
+W=list(w)
+print(W)
+a='abcdefghijklmnopqrstuvwxyz'
+L=[]
+for i in w:
+    for j in a:
+        if i==j:
+            L.append(a.index(i))
+print(L)
+L.sort()
+print(L)
+
+'''
+#joint命令不能生成字符串，原因没找到
+A=[a[k] for k in L]
+print(A)
+'''
+'''
+A=[]
+for k in L:
+    A.append(a[k])
+print(A)
+w1=''.joint(A)
+print(w1)
+
+'''
+w1=''
+for k in L:
+    w1=w1+a[k]
+print(w1)
