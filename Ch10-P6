@@ -1,0 +1,18 @@
+#Ch10-P6 布尔变量做标记
+
+from random import randint
+
+L1=[randint(1,10) for i in range(5)]
+L2=[randint(1,20) for i in range(5)]
+
+c=False #共同元素标记
+
+for i in L1:
+  for j in L2:
+    if i==j:
+      c=True
+      break
+if c==True:
+  print('Found common element',i)
+else:
+  print('There is no common element.')
