@@ -1,0 +1,8 @@
+#Ch10-P5 输出扑克牌值和花色
+
+suits=['Spades','Clubs','Diamond','Hearts']
+values=['One','Two','Three','Four','Five','Six','Seven','Eight',
+        'Nine','Ten','Jack','Queen','King','Ace']
+
+from random import choice
+print('{:<6s}'.format(choice(values)),'of ','{:<7s}'.format(choice(suits)),sep='')
