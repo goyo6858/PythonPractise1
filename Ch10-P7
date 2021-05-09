@@ -1,0 +1,10 @@
+#Ch10-P7 创建列表（使用数据类型转换命令）
+
+L=[]
+s=''
+for i in range(100):
+  s=s+'1'
+  n=int(s)
+  L.append(n)
+print(L)
+  
