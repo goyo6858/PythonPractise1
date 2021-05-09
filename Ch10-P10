@@ -1,0 +1,20 @@
+#Ch10-P10 回文相关的运算
+
+for i in range(10,100):
+  s=str(i)
+  sr=str(i)[ : :-1] #倒序
+  ir=int(sr) #转换为整数
+  _sum=i+ir #求和
+  ssum=str(_sum) #转换为字符串
+  srsum=ssum[ : :-1] #倒序
+  sumr=int(srsum) #转换为整数
+  c=0 #迭代计数
+  while ssum!=srsum:
+    ssum=string(_sum+sumr)
+    srsum=ssum[ : :-1]
+    c=c+1
+    #print(c)
+  else:
+    if c>20:
+      print(i)
+    
