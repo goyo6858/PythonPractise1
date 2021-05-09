@@ -1,0 +1,4 @@
+#Ch10-P2 字符格式化
+
+w=eval(input('Enter weight:'))
+print('Weight is {:.1f}kg.'.format(w))
