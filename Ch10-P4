@@ -1,0 +1,21 @@
+#Ch10-P4 商品及价格折扣输出
+
+#列表建立
+L=[]
+for i in range(10):
+  
+  L1=[]
+  print('Product ',i+1,':',sep='',end='')
+  L1.append(input(''))
+  print('Price ',i+1,':',sep='',end='')
+  L1.append(eval(input('')))
+  L.append(L1)
+
+#格式化输出
+print()
+d=eval(input('Enter discount:'))
+print()
+
+for j in L:
+    print('{:>3d}'.format(L.index(j)+1),'- {:<10s}:     '.format(j[0]),end='')
+    print('${:7.2f}'.format(j[1]*(1-d/100))) #注意小数点
