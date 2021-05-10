@@ -1,5 +1,69 @@
-#Ch10-P12
+#Ch10-P12 镜像字符串
 
+
+L=[]
+for i in range(1,100000):
+  if str(i).count('0')+str(i).count('1')+str(i).count('8')+str(i).count('6')+str(i).count('9')==len(str(i)) and str(i).count('6')==str(i).count('9'):
+      if str(i).count('6')==0 and str(i)==str(i)[ : :-1]:
+          L.append(i)
+      elif str(i).count('6')>0 and str(i).index('6')==str(i).index('9'):
+          for j in '018':
+              if str(i).count(j)>0 and str(i).index(j)==str(i)[ : :-1].index(j):
+                  L.append(i)
+              elif str(i).count('0')==str(i).count('1')==str(i).count('8')==0:
+                  L.append(i)
+print(L)
+
+
+'''
+L=[]
+for i in range(1,100000):
+  if str(i).count('0')+str(i).count('1')+str(i).count('8')+str(i).count('6')+str(i).count('9')==len(str(i)) and str(i).count('6')==str(i).count('9'):
+    L.append(i)
+print(L)
+'''
+'''
+L=[i in range(1,100000) for str(i).count('0')+str(i).count('1')+str(i).count('8')+str(i).count('6')+str(i).count('9')==len(str(i))]
+print(L)
+'''
+'''
+L=[]
+for i in range(1,100000):
+    if str(i).count('1')+str(i).count('0')+str(i).count('8')==len(str(i)) and \
+       str(i)==str(i)[ : :-1]:
+        L.append(i)
+
+    elif str(i).count('1')+str(i).count('0')+str(i).count('8')+str(i).count('6')+str(i).count('9')==len(str(i))\
+         and str(i).count('6')==str(i).count('9')>0:
+        L.append(i)
+
+L.sort()
+#print(L)
+
+L1=[]
+for j in L:
+    if str(j).count('6')==0 or str(j).index('6')==str(j)[ : :-1].index('9'):
+        L1.append(j)
+L1.sort()
+#print(L1)
+
+L2=[]
+for k in L1:
+    if str(k).count('6')==0:
+        L2.append(k)
+    elif str(k).count('0')>0 and str(k).index('0')==str(k)[ : :-1].index('0')and str(k).count('6')>0:
+        L2.append(k)
+    elif str(k).count('1')>0 and str(k).index('1')==str(k)[ : :-1].index('1')and str(k).count('6')>0:
+        L2.append(k)
+    elif str(k).count('8')>0 and str(k).index('8')==str(k)[ : :-1].index('8')and str(k).count('6')>0:
+        L2.append(k)
+    elif str(k).count('6')+str(k).count('9')==len(str(k)) and str(k).count('6')>0:
+        L2.append(k)
+L2.sort()
+print(L2)
+'''
+
+'''
 n='0169' #仅含有0169且0及1对称，6和9互为镜像的数满足条件
 L=[] #记录目标数字
 L1=[] #记录仅含0169的数字
@@ -22,6 +86,6 @@ for k in L1:
 print(L)
 #找出L1中6与9互为镜像的数字
 #排序
-
+'''
     
   
