@@ -1,0 +1,14 @@
+#Ch10-P15 算0的数量
+
+a=1
+for i in range(1,1001):
+    a=a*i
+s=str(a)[ : :-1]
+c=0 #计数
+for j in s:
+    if j=='0':
+        c=c+1
+    else:
+        break
+print(s)
+print('There are',c,'zeros.')
