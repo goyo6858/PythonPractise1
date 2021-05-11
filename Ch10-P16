@@ -1,0 +1,7 @@
+#Ch10-P16 整数小数单位转换
+
+n=eval(input('Enter height in feet:'))
+ri=int(n)
+rf=float(n)-ri
+rf_inch=int(rf*12)
+print(ri,'feet,',rf_inch,'inches')
