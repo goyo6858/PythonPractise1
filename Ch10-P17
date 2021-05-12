@@ -16,6 +16,6 @@ while s!='done':
       F.append(int(s))
 print(F)
 
-for j in (4,5,6,7):
+for j in (4,5,6,7): #注意for的范围用法
   print(j,'Foorters:',F.count(j))
   
