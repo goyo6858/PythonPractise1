@@ -1,0 +1,21 @@
+#Ch10-P19 日期处理
+
+b=''
+L=[]
+Lm=[] #月列表
+Ld=[] #天列表
+
+while b!='done':
+  b=input('Enter birthday(format: month/day):')
+  if b!='done':
+     L.append(b.split('/'))
+     
+print(L)
+      
+for i in L:
+  Lm.append(i[0])
+  Ld.append(i[1])
+
+print('There are',Lm.count('2'), 'Feburaries.')
+print('There are',Ld.count('25'), '25th\'s.')
+  
