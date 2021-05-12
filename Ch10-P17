@@ -1,0 +1,21 @@
+#Ch10-P17 按格式输入数据并计算
+
+s=''
+F=[] #记录英尺
+'''
+c4=0 #4英尺计数
+c5=0 #5英尺计数
+c6=0 #6英尺计数
+c7=0 #7英尺计数
+'''
+while s!='done':
+  s=input('Enter height(format Feet\'Inch"):')
+  for i in s:
+    if i=='\'':
+      s=s[ :s.index(i)]
+      F.append(int(s))
+print(F)
+
+for j in (4,5,6,7):
+  print(j,'Foorters:',F.count(j))
+  
