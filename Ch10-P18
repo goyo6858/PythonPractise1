@@ -1,0 +1,17 @@
+#Ch10-P18 最高分最低分格式化解析
+
+s=''
+S=[]
+S1=[]
+while s!='done':
+  s=input('Enter score(format: winning sore-losing score):')
+  if s!='done': #防止'done被录入S1
+    S1.append(s.split('-'))
+      
+for i in S1:
+  S.append(int(i[0]))
+  S.append(int(i[1]))
+  
+print(S)
+print('Highest score:', max(S))
+pri('Lowest score:', min(S))
