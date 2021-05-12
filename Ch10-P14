@@ -1,0 +1,10 @@
+#Ch10-P14 找最小整数（用while循环）
+
+i=0
+r=0
+while r!=3.5*i:
+  s=str(i)[1: ]+str(i)[0]
+  r=int(s)
+  i=i+1
+else:
+  print(i)
