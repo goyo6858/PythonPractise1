@@ -1,0 +1,13 @@
+#Ch11-P1 输入产品和价格后按产品名称查价格
+
+d={} 
+k=''
+v=0
+for i in range(3):
+  k=input('Enter product:')
+  d[k]=eval(input('Enter its price:'))
+s=input('Enter product to search:')
+if s in d:
+  print('The price for',s,'is',d[s])
+else:
+  print('The product can\'t be found.')
