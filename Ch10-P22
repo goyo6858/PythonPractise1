@@ -1,0 +1,24 @@
+#Ch10-P22 价格凑整
+
+ps=5
+pm=3
+po=1/3 #分数
+
+ns=0 #杨桃数量
+nm=0 #芒果数量
+no=0 #橙子数量
+
+Ns=[] #杨桃数量可能性
+Nm=[] #芒果数量可能性
+No=[] #橙子数量可能性
+
+for ns in range(101):
+  for nm in range(101):
+    for no in range(101):
+      if ns+nm+no==100 and ns*ps+nm*pm+no*po==100:
+        Ns.append(ns)
+        Nm.append(nm)
+        No.append(no)
+for i in range(len(Ns)):
+  print('Possible combination #',i+1,':','Starfruit:',Ns[i],'Mango:',\
+  Nm[i],'Orange:',No[i])
