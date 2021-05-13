@@ -1,0 +1,16 @@
+#Ch10-P20 日期转换
+
+#日期对应列表
+L=[['January', 1],['Feburary',2],['March',3],['April',4],['May',5],['June',6],['July',7],['August',8],['September',9],['Octobor',10],['November',11],['December',12]]
+Ld=[] #转换后元素列表
+
+d=input('Enter date(format mm/dd/yy):')
+s=d.split('/')
+
+for i in L:
+  if int(s[0])==i[1]:
+    Ld.append(i[0])
+Ld.append(str(int(s[1])))
+Ld.append('19'+s[2])
+
+print(Ld[0]+' '+Ld[1]+','+Ld[2])
