@@ -1,0 +1,16 @@
+#Ch10-21 约分（Reduce a fraction to its lowest terms)
+
+f=input('Enter fraction(format: numerator/denominator):')
+n=int(f.split('/')[0])
+d=int(f.split('/')[1])
+
+C=[] #公约数列表
+for i in range(1,n+1):
+  if n%i==0:
+    for j in range(1,d+1):
+      if d%d==0:
+        if i==j:
+          C.append(i)
+rn=int(n/max(C))
+rd=int(d/max(C))
+print(str(rn)+'/'+str(rd))
