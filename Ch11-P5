@@ -1,0 +1,26 @@
+#Ch11-P5 输入信息形成字典
+
+d={} 
+#Ld=[] #空列表用于创建字典————不能从普通列表创建字典
+
+T=[] #Team names
+S=[] #team scores
+
+for i in range(5):
+  L1=[] #计分列表
+  L2=[] #字典元素
+  team_name=input('Enter team name:')
+  T.append(team_name)
+  w=eval(input('game won:'))
+  l=eval(input('game lost:'))
+  L1.append(w)
+  L1.append(l)
+  d[team_name]=L1 #注意字典的构建方法
+
+print('d:',d)
+
+#输入队名查询
+
+t=input('Enter team for inquiry:')
+if t in d:
+  print('Winning rate:',100*d[t][0]/(d[t][0]+d[t][1]),'%')
