@@ -1,0 +1,76 @@
+#Ch11-P8 扑克牌游戏
+'''
+#d={'suit':value for 'suit' in ['spades','clubs','diamonds','hearts'] for value in range(1,14)} #字符串不是变量
+#d={suit:value for suit in ['spades','clubs','diamonds','hearts'] for value in range(1,14)} #得到4个值:'suit':13
+#d={(suit:value for suit in ['spades','clubs','diamonds','hearts']) for value in range(1,14)} #语法不正确
+#print(d)
+
+#书上例子：
+#deck=[{suit:value} for suit in ['spades','clubs','diamonds','hearts'] for value in range(1,14)] #多个字典成为列表的元素
+
+deck={}
+for suit in ['spades','clubs','diamonds','hearts']:
+  for value in range(1,14):
+    deck[suit]=value #因为每次赋值后同一个键被更新，所以结果就是value的最高值13
+'''
+#deck=[{'value':i,'suit':c} for c in ['spades','clubs','diamonds','hearts'] for i in range(1,14)] #书上例子不简洁，不如下列代码：
+
+
+deck=[{suit:value} for suit in ['spades','clubs','diamonds','hearts'] for value in range(1,14)] #多个字典成为列表的元素，期望产生一个52元素的字典
+print(deck)
+
+from random import shuffle
+shuffle(deck) #注意shuffle的用法，是函数而不是属性
+print(deck)
+
+#发牌
+d1=[]
+d2=[]
+for i in range(3):
+  d1.append(deck[i])
+  d2.append(deck[i+3])
+print('Player1 cards:', d1)
+print('Player2 cards:', d2)
+
+#最高分为赢家
+'''
+S1=[d1[i].values() for i in range(3)] #values()的s不能少
+S2=[d2[i].values() for i in range(3)]
+'''
+'''
+S1=list(d1.values())
+S2=list(d2.values())
+'''
+
+#以下获取牌值的方法值得注意，比书上例子似乎简单
+S1=[] #牌分列表
+S2=[] #牌分列表
+for j in range(3):
+  for k in d1[j]:
+    S1.append(d1[j][k])
+  for l in d2[j]:
+    S2.append(d2[j][l])
+print(S1)
+print(S2)
+print('Player 1 highest score:', max(S1))
+print('Player 2 highest score:', max(S2))
+
+if max(S1) > max(S2):
+  print('Winner is Player 1')
+elif max(S1)<max(S2):
+  print('Winner is Player 2')
+else:
+  #print('It's a draw')
+  S1.pop(S1.index(max(S1)))
+  S2.pop(S2.index(max(S2)))
+  if max(S1) > max(S2):
+    print('Winner is Player 1')
+  elif max(S1)<max(S2):
+    print('Winner is Player 2')
+  else:
+    if min(S1) > min(S2):
+       print('Winner is Player 1')
+    elif min(S1)<min(S2):
+       print('Winner is Player 2')
+    else:
+       print('It is a draw')
