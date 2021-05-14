@@ -1,0 +1,35 @@
+#Ch11-P9 扑克花色及数值的处理
+
+deck=[{suit:value} for suit in ['spades','clubs','diamonds','hearts'] for value in range(1,14)]
+
+from random import shuffle
+
+shuffle(deck)
+L=[]
+for i in range(3):
+  L.append(deck[i])
+
+#同花顺检查
+Ls=[]
+for j in range(3):
+  for c in L[j]:
+    Ls.append(c)
+print(Ls)
+for k in Ls:
+  if Ls.count(k)==len(Ls): #花色数量同列表长度；调试验证可以用len(Ls)-1来试验输出（3张同花色出现概率太小）
+    print('It is a flush')
+    
+#炸弹检查
+Lv=[]
+for l in range(3):
+  for c in L[l]:
+    Lv.append(L[l][c])
+for m in Lv:
+  if Lv.count(m)==len(Lv):
+    print('It is three-of-a-kind.')
+#第3个问题：对子的检查可以调整count的数量实现
+  elif Lv.count(m)==2:
+    print('It is a pair')
+#顺子检查
+if max(Lv)-min(Lv)==2 and Lv.count(max(Lv))==Lv.count(min(Lv)):
+  print('It is a straight.')
