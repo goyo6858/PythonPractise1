@@ -1,0 +1,30 @@
+#Ch11-P7 数字与频率
+
+from random import randint
+from pprint import pprint
+
+L=[[randint(1,10) for i in range(5)] for j in range(5)]
+pprint(L)
+
+L1=[L[k][l] for l in range(5) for k in range(5)]
+print(L1)
+
+d={m:L1.count(m) for m in L1}
+print(d)
+
+'''
+#d1={d[n]:n for n in d} #只有3组
+#print('d1:',d1)
+#for n in d:  #只有一组
+  #d1={d[n]:n}
+'''
+
+Ls=[[d[n],n] for n in d]
+print(Ls)
+Ls.sort()
+print(Ls)
+
+print('Three most common numbers:')
+
+for x in range(3):
+  print(Ls[-1-x][1])
