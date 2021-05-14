@@ -1,0 +1,18 @@
+#Ch11-P2 字典的查询
+
+d={'apple':1,'orange':2,'mango':3}
+L=[] #记录目标产品
+
+p=eval(input('Enter a price:'))
+
+for i in d:
+  if d[i]<p:
+    L.append(i)
+    
+#print(L)
+
+print('Products below $',p,':')
+
+for j in L:
+  #print(d[j]) 这样仅会输出价格
+  print('{:>8s}'.format(j),':','${:>5.2f}'.format(d[j]))
