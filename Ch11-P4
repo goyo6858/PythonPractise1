@@ -1,0 +1,14 @@
+#Ch11-P4 用户名及密码登录管理
+
+d_up={'John Lawler':'jl1','Michael Jordan':'MJ2','Tim Cook':'tm3','Alan Mullaly':'am4','Jim Farley':'jf5','Chris Webber':'cw6','Mark Miller':'mm7','James Bond':'jm8','Edward Nordon':'ed9'}
+u=input('Enter username:')
+
+
+if u not in d_up:
+  print('User name not valid!')
+else:
+  p=input('Enter password:')
+  if p==d_up[u]:
+    print('You are logged in the system.')
+  else:
+    print('Incorrect password!')
