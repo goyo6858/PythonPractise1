@@ -1,0 +1,49 @@
+#Ch11-P3 月份与天数
+
+d={'January':31,'Feburary':28,'March':31,'April':30,'May':31,'June':30,'July':31,'August':31,'September':30,'October':31,'Novenber':30,'December':31}
+
+#输入月份显示日期
+
+m=input('Enter a month(long form):')
+print(m,'has',d[m],'days')
+
+#按字母顺序显示键
+
+#print(list(d))
+
+#for i in d:
+  #print(i)
+print('Alphabetically sorted months:')
+a='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+for j in a:
+  for k in list(d):
+    if j==k[0]:
+      print(k)
+      
+#第二种方法更简单
+print('Alphabetically sorted months(Method 2):')
+La=list(d.items())
+La.sort()
+for j in La:
+  print(j[0])
+
+#输出31天的月份
+
+print('Months of 31 days:')
+for k in d:
+  if d[k]==31:
+    print(k)
+    
+#输出按天数排序的字典元素（带键和值）
+#重新构建元素倒置的字典
+
+d1={d[m]:m for m in d} 
+print(d1)
+
+#查询仅须输入月的前三个字母
+
+m1=input('Enter month(short form):')
+for n in d:
+  if m1==n[ :3]:
+    print(d[n])
+  
