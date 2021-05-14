@@ -1,0 +1,31 @@
+#Ch11-P13 格式检查
+
+L=['aabbcc','abcabc','abccba','abcabc','acbcba','accccb','accbcc','bccacc','cbacba','cbaabc']
+
+mask=input('Enter mask with \'*\' as wildcard:') #输入格式
+
+#创建格式字典
+dm={}
+index=0
+for c in mask:
+  if c!='*':
+    dm[c]=index
+  index=index+1
+print(dm)
+
+#筛选
+c1=0 #匹配计数
+for s in L:
+  f1=0 #flag记录格式一致性结果 #注意f1的复位
+  for c in dm:
+    if s[dm[c]]==c:
+      f1=f1+1
+    else:
+      f1=f1
+  if f1==len(dm) and len(mask)==len(s):  #长度必须相等才可以
+    print('Matched element:',s)
+    c1=c1+1
+if c1==0:
+  print('No match')
+ 
+      
