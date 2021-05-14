@@ -23,4 +23,16 @@ print('d:',d)
 
 t=input('Enter team for inquiry:')
 if t in d:
-  print('Winning rate:',100*d[t][0]/(d[t][0]+d[t][1]),'%')
+  print('Winning rate:',round((100*d[t][0]/(d[t][0]+d[t][1])),2),'%')
+
+#输出胜场
+Lw=[]
+for j in d:
+  Lw.append(d[j][0])
+print('Winning scores of all teams:',Lw)
+
+#第三部分只有有胜场即可
+print('Team with winning records:')
+for k in d:
+  if d[k][0]>0:
+    print(k)
