@@ -1,0 +1,6 @@
+#Ch12-E2 写入文件
+
+f=open('D:\Python\APracticalGuide\Ch12\E12-2.txt','w')
+print('This is line 1.',file=f)
+print('This is line 2.',file=f)
+f.close() #如果不进行关闭操作，写入的内容不会被保存
