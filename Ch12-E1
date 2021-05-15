@@ -3,3 +3,8 @@
 #使用strip方法
 lines=[line.strip() for line in open('D:\Python\APracticalGuide\Ch12\E12-1.txt')]
 print(lines)
+
+#open().read()方法——可以更好的展示文本
+s=open('D:\Python\APracticalGuide\Ch12\E12-1.txt').read()
+print(s)
+
