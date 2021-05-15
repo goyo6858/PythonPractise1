@@ -1,0 +1,11 @@
+#Ch13-P3 加整数各位求和
+
+def sum_digits():
+  n=input('Enter a integer:')
+  L=[]
+  for i in n:
+    L.append(int(i))
+  return sum(L) #注意return的缩进
+
+print(sum_digits()) #需要输出才能观察运行
+    
