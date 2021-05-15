@@ -1,0 +1,45 @@
+#Ch12-P4 跟Tab有关的字符处理
+
+L=[['water melon','wmelon@gmail.com','555-3314'],\
+['grape fruit','gfruit@gmail.com','555-3315'],\
+['blue berry','bberry@gmail.com','555-3316']]
+
+#写入文件
+f1=open('D:\Python\APracticalGuide\Ch12\students.txt','w')
+for r in L:
+  print(r[0]+'  '+r[1]+'  '+r[2],file=f1)
+f1.close()
+
+#读取
+L1=[line.strip() for line in open('D:\Python\APracticalGuide\Ch12\students.txt')]
+print('L1:',L1)
+L3=[]
+for i in L1:
+  L2=i.split('  ') #注意不要用append, 否则会变成2维列表
+  L3.append(L2)
+print(L3)
+
+#修改
+L4=[]
+L5=[]
+L6=[]
+for j in L3:
+  L4=[]
+  L5=[]
+  s=''
+  p=''
+  L4=j[0].split(' ')
+  s=L4[0][0].upper()+L4[0][1:]+' '+L4[1][0].upper()+L4[1][1:]
+  print(s)
+  p='031-'+j[2]
+  L5.append(s)
+  L5.append(j[1])
+  L5.append(p)
+  L6.append(L5)
+print(L6)
+
+#写入文件
+f2=open('D:\Python\APracticalGuide\Ch12\students2.txt','w')
+for k in L6:
+  print(k[0],'  ',k[1],'  ',k[2],file=f2) #注意要输出元素，而不是列表，否则会有方括号
+f2.close()
