@@ -1,0 +1,7 @@
+#Ch13-P1 输出星号方块
+
+def rectangle(m,n):
+  for i in range(m):
+    print('*'*n)
+
+rectangle(eval(input('Enter rows:')),eval(input('Enter columns:')))
