@@ -1,6 +1,7 @@
 #Ch13-P2 改变列表
 
 L1=['two','broke','girls']
+L2=['house','of','cards']
 
 def add_excitement(L):
   for i in range(len(L)):
@@ -9,3 +10,13 @@ def add_excitement(L):
 print('L1 before function runs:',L1)
 add_excitement(L1)
 print('L1 after function runs:',L1)
+
+#不改变原列表
+def add_excitement1(L):
+  Ln=L
+  for i in range(len(L)):
+    Ln[i]=L[i]+'!'
+  return(Ln)
+
+print(L2)
+print(add_excitement1(L2))
