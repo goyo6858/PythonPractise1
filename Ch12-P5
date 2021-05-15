@@ -1,0 +1,14 @@
+#Ch12-P5 名字缩写查询全名
+
+#缩写输入
+#ini=input('Enter initials:')
+#li=len(ini)
+'''
+L=[name.strip() for name in open('D:\Python\APracticalGuide\Ch12\namelist.txt')]
+print(L)
+'''
+L1=[line for line in open('D:\Python\APracticalGuide\Ch12\test.txt')]
+print(L1)
+
+s=open('D:\Python\APracticalGuide\Ch12\test.txt').read()
+print(s)
