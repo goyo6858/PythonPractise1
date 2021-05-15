@@ -1,0 +1,40 @@
+#Ch12-P1 改变文件内容
+
+#创建文件
+f1=open('D:\Python\APracticalGuide\Ch12\class_scores.txt','w') #创建文件
+
+#写入名字和分数
+for i in range(3):
+  name=input('Enter name:')
+  score=input('Enter score:')
+  print(name,score, file=f1)
+f1.close()
+
+#读取文件
+L=[r.strip() for r in open('D:\Python\APracticalGuide\Ch12\class_scores.txt')]
+print(L)
+L1=[] #生成二维数组
+for j in L:
+  L1.append(j.split(' '))
+print(L1)
+
+#修改分数并写入新文件
+L2=[]
+L3=[]
+D={}
+for k in L1:
+  L2=[] #复位
+  L2.append(k[0]+' '+k[1])
+  L2.append(int(k[2])+5)
+  L3.append(L2)
+  D[k[0]+' '+k[1]]=int(k[2])+5
+print(L3)
+print(D)
+
+#创建并写入新文件
+f2=open('D:\Python\APracticalGuide\Ch12\scores2.txt','w')
+for l in L3:
+  print(l[0],l[1],file=f2)
+for m in D:
+  print(m,D[m],file=f2)
+f2.close()
