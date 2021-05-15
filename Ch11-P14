@@ -1,0 +1,20 @@
+#Ch11-P14 字典用于数据管理
+
+d=[{'name':'Todd', 'phone':'555-1414', 'email':'todd@mail.net'},\
+{'name':'Helga', 'phone':'555-1618', 'email':'helga@mail.net'}, \
+{'name':'Princess', 'phone':'555-3141', 'email':''},\
+{'name':'LJ', 'phone':'555-2718', 'email':'lj@mail.net'}]
+
+print(d)
+
+#电话以8结尾的用户
+print('Users whose phone ends with \'8\':')
+for i in d:
+  if i['phone'][7]=='8':
+    print(i['name'])
+    
+#没有email的用户
+print('Users without email:')
+for j in d:
+  if j['email']=='':
+    print(j['name'])
