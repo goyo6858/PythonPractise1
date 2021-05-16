@@ -1,0 +1,14 @@
+#Ch13-P11 字符串比较
+
+def matched_string(s1,s2):
+  if len(s1)>len(s2):
+    r=len(s2)
+  else:
+    r=len(s1)
+  c=0
+  for i in range(r):
+    if s1[i]==s2[i]:
+      c=c+1
+  return c
+
+print(matched_string(input('Enter 1st string:'),input('Enter 2nd string:')))
