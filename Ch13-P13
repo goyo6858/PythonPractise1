@@ -1,0 +1,14 @@
+#Ch13-P13 改变大小写
+
+def case_reverse(s):
+  su=s.upper()
+  sl=s.lower()
+  sn=''
+  for i in range(len(s)):
+    if s[i]==su[i]:
+      sn=sn+sl[i]
+    elif s[i]==sl[i]:
+      sn=sn+su[i]
+  return sn
+  
+print(case_reverse('Goodman'))
