@@ -1,0 +1,12 @@
+#Ch13-P4 求digital root （数根）
+
+def digital_root(n):
+  r=str(n)
+  while int(r)>9:
+    s=0
+    for c in r:
+      s=s+int(c)
+    r=str(s)
+  return int(r)
+
+print(digital_root(eval(input('Enter number:'))))
