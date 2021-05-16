@@ -1,0 +1,20 @@
+#Ch13-P6 二项式分布系数 binom coefficient
+
+def binom(n,k):
+  while n-k<0:
+    print('n must be greater than k!')
+    n=eval(input('Enter n again:'))
+    k=eval(input('Enter k again:'))
+  fn=1
+  for i in range(1,n+1):
+    fn=fn*i
+  fk=1
+  for j in range(1,k+1):
+    fk=fk*j
+  fd=1
+  for k in range(1,n-k+1):
+    fd=fd*k
+  r=fn/(fk*fd)
+  return r
+
+print(binom(5,3))
