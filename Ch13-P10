@@ -1,0 +1,14 @@
+#Ch13-P10 最接近数
+
+def closest(L,n):
+  L.sort() #排序很重要
+  for i in L:
+    if i<=n:
+      f=i
+    else:
+      break
+  return f
+    
+L1=[1,2,3,4,5,7,8,9,10]
+
+print(closest(L1,8))
