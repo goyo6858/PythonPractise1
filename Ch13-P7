@@ -1,0 +1,14 @@
+#Ch13-P7 n位随机整数
+
+def ndigit_int(n):
+  from random import randint
+  if n==1:
+    s=randint(1,9)
+  elif n>1:
+    s=''
+    for i in range(1,n):
+      s=s+str(randint(0,9))
+    s=str(randint(1,9))+s
+  return int(s)
+  
+print(ndigit_int(eval(input('Enter integer:'))))
