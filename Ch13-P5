@@ -1,0 +1,15 @@
+#Ch13-P5 字符串比较
+
+def str_diff(s1,s2):
+  loc=0
+  diff=-1
+  while diff<0:
+    if s1[loc]==s2[loc]:
+      loc=loc+1
+      if loc==len(s1):
+        break
+    else:
+      diff=loc
+  return diff
+  
+print(str_diff((input('Enter string1:')),(input('Enter string2:'))))
