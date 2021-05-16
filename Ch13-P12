@@ -1,0 +1,12 @@
+#Ch13-P12 找字符中某个字母的所有位置
+
+def findall(s,l):
+  i=0
+  L=[]
+  for c in s:
+    if c==l:
+      L.append(i)
+    i=i+1
+  return L
+
+print(findall('tomorrow','o'))
