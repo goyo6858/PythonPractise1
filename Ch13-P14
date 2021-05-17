@@ -1,0 +1,17 @@
+#Ch13-P14 检查列表排序
+
+def list_check(L):
+  a=L[0]
+  for i in L:
+    if i>=a:
+      f=True
+      a=i
+    else:
+      f=False
+  return f
+  
+L1=[1,2,5,6,9]
+  
+print(list_check(L1))
+    
+    
