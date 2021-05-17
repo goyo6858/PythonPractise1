@@ -1,0 +1,19 @@
+#Ch13-P16 字符差异
+
+def one_away(s1,s2):
+  if len(s1)!=len(s2):
+    f=False
+  else:
+    c=0
+    for i in range(len(s1)):
+      if s1[i]==s2[i]:
+        pass
+      else:
+        c=c+1
+    if c==1:
+      f=True
+    else:
+      f=False
+  return f
+
+print(one_away('hike','hide'))
