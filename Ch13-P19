@@ -1,4 +1,6 @@
 #Ch13-P19 数字的文字表达
 
 def verbose(n):
+  N=['billion','million','thousand','hundred']
+  N100=['
   
