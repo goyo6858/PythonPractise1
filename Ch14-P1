@@ -1,0 +1,15 @@
+#Ch14-P1 类：投资计算
+
+class Investment:
+  def __init__(self,principal,interest):
+    self.principal=principal
+    self.interest=interest
+  def value_after(self,n):
+    r=self.principal*(1+self.interest/100)**n
+    print('The value of {} with interest {} after {} years is {}.'.format(self.principal, self.interest,n, r)) 
+    
+PlanA=Investment(10000,5)
+
+#print(PlanA.value_after(3))不需要print指令
+
+PlanA.value_after(3)
