@@ -1,0 +1,26 @@
+#Ch14-P2 类-产品
+
+class product:
+  def __init__(self,name,amount,price):
+    self.name=name
+    self.amount=amount
+    self.price=price
+  def get_price(self,n):
+    if n<10:
+      cost=self.price*n
+    elif 10<n<99:
+      cost=self.price*n*(1-0.1)
+    elif n>=100:
+      cost=self.price*n*(1-0.2)
+    return cost
+  def make_purchase(self,n):
+    self.amount=self.amount-n
+    return self.amount
+    
+p1=product('mouse',200,60)
+ 
+print('Purchase cost: $%d' %p1.get_price(50))
+print('Stock after purchase made:%d' %p1.make_purchase(80))
+ 
+ 
+  
