@@ -1,0 +1,24 @@
+#Ch13-P20 列表联合与排序
+
+def merge(L1, L2):
+  L=L1+L2
+  L.sort()
+  return L
+  
+def merge1(L1,L2):
+  Lc=L1+L2
+  k=len(Lc)
+  L=[]
+  while len(L)<k:
+    for i in Lc:
+      if i==min(Lc):
+        L.append(i)
+        Lc.pop(Lc.index(i))
+  return L
+    
+
+La=[1,2,3]
+Lb=[7,9,8]
+
+print(merge(La,Lb))
+print(merge1(La,Lb))
