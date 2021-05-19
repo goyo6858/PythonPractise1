@@ -1,0 +1,15 @@
+#Ch14-P6 长度转换
+
+class Converter:
+  def __init__(self,value,unit):
+    self.value=value
+    self.unit=unit
+    Units=['inch','feet','m','cm','mm','km']
+  def inch():
+    index=Units.index(self.unit)
+    if index=0:
+      r=self.value
+    elif inde=1:
+      r=self.value/12
+    ...
+    
