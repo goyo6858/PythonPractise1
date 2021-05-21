@@ -1,0 +1,15 @@
+#Ch15-E3 按钮指令调用函数
+
+from tkinter import *
+
+def callback():
+  label.configure(text='Button clicked')
+
+root=Tk()
+label=Label(text='Button not clicked')
+button=Button(text='Click here',command=callback)
+
+label.grid(row=0,column=0)
+button.grid(row=1,column=0)
+
+mainloop() #后面的括号没有也执行了
