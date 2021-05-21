@@ -1,0 +1,20 @@
+#Ch15-E5 全局变量（尽量少用）
+
+from tkinter import *
+
+def callback():
+  global clk_count
+  clk_count=clk_count+1
+  label.configure(text='Clicked {} times.'.format(clk_count))
+
+clk_count=0
+
+root=Tk()
+
+label=Label(text='Not clicked')
+button=Button(text='Click here', command=callback)
+
+label.grid(row=0,column=0)
+button.grid(row=1,column=0)
+
+mainloop()
