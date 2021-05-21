@@ -1,0 +1,11 @@
+#Ch16-E2 颜色
+
+def rgb(r,g,b):
+  return '#{:02X}{:02X}{:02X}'.format(r,g,b)
+  
+from tkinter import *
+
+root=Tk()
+
+btn1=Button(text='Test',bg=rgb(180,50,50))
+btn1.grid(row=0,column=0)
