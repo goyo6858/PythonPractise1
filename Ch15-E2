@@ -1,0 +1,31 @@
+#Ch15-E2 温度计算
+
+from tkinter import *
+
+#函数
+
+def calculate():
+  temp=int(entry.get())
+  converted_temp=temp*9/5+32
+  output_lbl.configure(text='Converted temperature in Celcius: {:.1f}'.format(converted_temp))
+  entry.delete(0,END)
+
+#创建窗口
+
+root=Tk()
+
+#创建元素：标签、输入窗口、按钮
+
+msg_lbl=Label(text='Enter temperature',font=('Verdana',16))
+output_lbl=Label(font=('Verdana',16))
+entry=Entry(font=('Verdana',16),width=4)
+cal_btn=Button(text='OK',font=('Verdana',16),command=calculate)
+
+#确定元素位置
+msg_lbl.grid(row=0,column=0)
+entry.grid(row=0,column=1)
+cal_btn.grid(row=0,column=2)
+output_lbl.grid(row=1,column=0,columnspan=3)
+
+#创建循环程序（需要把元素包含再root=Tk()和mainloop()之间？）
+mainloop()
