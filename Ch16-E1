@@ -1,0 +1,28 @@
+#Ch16-E1 框架
+
+from tkinter import *
+
+Btns=[0]*5
+for i in range(5):
+  Btns[i]=Button(text=str(i))
+  Btns[i].grid(row=0,column=i)
+
+ok_btn=Button(text='OK')
+ok_btn.grid(row=2,column=0,columnspan=5) #注意columnspan的影响
+
+#使用框架包含按钮
+
+Btns_2=[0]*8
+BtnFrame2=Frame()
+
+for j in range(8):
+  Btns_2[j]=Button(BtnFrame2,text=str(j))
+  Btns_2[j].grid(row=3,column=j)
+
+ok_btn2=Button(text='ok')
+ok_btn2.grid(row=4,column=0)
+BtnFrame2.grid(row=3,column=0) #如果没有设定坐标，则其中的按钮不会显示
+ 
+
+
+  
