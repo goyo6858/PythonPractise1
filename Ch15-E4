@@ -1,0 +1,24 @@
+#Ch15-E4 多个按钮及变量控制
+
+from tkinter import *
+
+letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+def callback(x):
+  label.configure(text='Button {} clicked'.format(letters[x]))
+
+#GUI
+root=Tk()
+
+label=Label()
+label.grid(row=1,column=0,columnspan=26) #columnspan?
+
+buttons=[0]*26 #创建一个26元素的列表
+
+for i in range(26):
+  buttons[i]=Button(text=letters[i],command=lambda x=i:callback(x))
+  buttons[i].grid(row=0,column=[i])
+
+mainloop()
+
+
