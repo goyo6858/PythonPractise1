@@ -1,0 +1,9 @@
+#Ch15-E1
+
+#导入模块，创建窗口
+
+from tkinter import *
+root=Tk()
+
+#创建事件循环程序
+mainloop()
