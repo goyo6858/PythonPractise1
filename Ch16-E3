@@ -1,0 +1,26 @@
+#Ch16-E3 在控件中插入图片
+
+from tkinter import *
+
+def pic_ctrl():
+  global f
+  if f==0:
+  #if lbl1.configure(image=''): #如何针对控件属性做逻辑判断？
+    lbl1.configure(image=pic1)
+    f=f+1
+  elif f==1:
+    lbl1.configure(image='')
+    f=f-1
+    
+#用于控件属性控制的全局变量初始化
+f=0
+
+home=Tk()
+pic1=PhotoImage(file='D:\Python\APracticalGuide\Icon.gif')
+lbl1=Label(text='Settings', image=pic1)
+btn1=Button(text='OK',image=pic1,command=pic_ctrl)
+
+lbl1.grid(row=0,column=0)
+btn1.grid(row=1,column=0)
+
+mainloop()
