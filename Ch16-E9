@@ -1,0 +1,32 @@
+#Ch16-E9 方向键移动方块
+
+from tkinter import *
+
+root=Tk()
+
+def move_rect(event):
+  global pos_v
+  global pos_h
+  if event.keysym=='Up':
+    pos_v=pos_v-1
+  elif event.keysym=='Down':
+    pos_v=pos_v+1
+  elif event.keysym=='Right':
+    pos_h=pos_h+1
+  elif event.keysym=='Left':
+    pos_h=pos_h-1
+  cvs1.coords(rect1,100+pos_h,100+pos_v,180+pos_h,180+pos_v)
+
+#绑定键盘输入与函数
+pos_v=0
+pos_h=0
+root.bind('<Key>',move_rect)
+cvs1=Canvas(width=600,height=600)
+cvs1.focus_set() #使画布获得捕捉键盘输入的状态
+rect1=cvs1.create_rectangle(100,100,180,180,fill='black')
+
+
+#布局
+cvs1.grid(row=0,column=0)
+
+mainloop()
