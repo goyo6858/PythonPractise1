@@ -1,0 +1,21 @@
+#Ch16-E5 单选按钮（radio button）与复选按钮(Check button)
+
+from tkinter import *
+
+root=Tk()
+
+bg_color=IntVar()
+rbtn1=Radiobutton(text='Red',var=bg_color,value=1) #radiobutton需要有value属性？
+rbtn2=Radiobutton(text='Green',var=bg_color,value=2)
+rbtn3=Radiobutton(text='Blue',var=bg_color,value=3)
+
+mode=IntVar()
+cbtn=Checkbutton(text='VPN Connection',var=mode)
+
+#布局
+rbtn1.grid(row=0,column=0)
+rbtn2.grid(row=1,column=0)
+rbtn3.grid(row=2,column=0)
+cbtn.grid(row=3,column=1)
+
+mainloop()
