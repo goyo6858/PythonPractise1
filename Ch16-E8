@@ -1,0 +1,18 @@
+#Ch16-E8 GUI事件
+
+from tkinter import *
+
+root=Tk()
+#<key>
+def callback(event):
+  print(event.keysym)
+def callback1(event):
+  print('Enter')
+def callback2(event):
+  print('Up')  
+
+root.bind('<Return>',callback1)
+root.bind('<Up>',callback2)
+root.bind('<Key>',callback)
+
+mainloop()
