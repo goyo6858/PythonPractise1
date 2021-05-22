@@ -1,0 +1,40 @@
+#Ch16-E4 画板
+
+from tkinter import *
+
+test_page=Tk()
+
+#RGB颜色十进制转换
+def rgb(r,g,b):
+  return '#{:02X}{:02X}{:02X}'.format(r,g,b)
+
+#画板及元素
+  
+pic1=PhotoImage(file='D:\Python\APracticalGuide\Icon.gif')
+
+cvs=Canvas(width=750,height=750,bg=rgb(30,50,70))
+cvs.create_rectangle(0,320,20,400,fill=rgb(220,20,50))
+cvs.create_oval(30,150,80,200,fill=rgb(110,220,30)) #?
+cvs.create_line(90,10,120,360,fill=rgb(210,210,210))
+cvs.create_rectangle(150,10,170,380,fill=rgb(180,30,50))
+cvs.create_image(400,400,image=pic1)
+
+rect1=cvs.create_rectangle(550,550,650,650,fill=rgb(80,80,20))
+
+
+#按钮命令函数
+def chg_rect():
+    cvs.itemconfigure(rect1,fill='yellow')
+    cvs.coords(rect1,650,650,750,750)
+def rmv_rect():
+    cvs.delete(rect1)
+
+btn1=Button(text='Change rectangle color',command=chg_rect)
+btn2=Button(text='Remove rectangle',command=rmv_rect)
+
+#布局
+cvs.grid(row=0,column=0)
+btn1.grid(row=1,column=0)
+btn2.grid(row=1,column=1)
+
+mainloop()
