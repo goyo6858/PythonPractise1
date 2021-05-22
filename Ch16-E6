@@ -1,0 +1,14 @@
+#Ch16-E6 文本框
+
+from tkinter import *
+from tkinter.scrolledtext import ScrolledText
+
+root=Tk()
+
+txt1=Text(font=('Times New Roman',12),height=5,width=50)
+txt2=ScrolledText(font=('Arial',10),height=10,width=60)
+
+txt1.grid(row=0,column=0)
+txt2.grid(row=1,column=0)
+
+mainloop()
