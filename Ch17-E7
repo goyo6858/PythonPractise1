@@ -1,0 +1,30 @@
+#Ch17-E7 文件对话窗口
+
+from tkinter import *
+from tkinter.filedialog import *
+from tkinter.scrolledtext import ScrolledText
+
+#变量及函数
+def file_dialog1(): #askopenfilename
+  f_name=askopenfilename(initialdir='D:\Python\APracticalGuide',\
+  filetypes=[('Image files','.jpg .png .gif'),('Text files','.txt'),('All files','*')])
+  s=open(f_name).read()
+  tbox1.insert(1.0,s)
+
+#窗体
+root=Tk()
+root.title='File Dialogs'
+
+#对象
+btn1=Button(text='Open File',command=file_dialog1)
+tbox1=ScrolledText()
+
+#布局
+btn1.grid(row=0,column=0)
+tbox1.grid()
+
+#控制
+
+#循环
+mainloop()
+
