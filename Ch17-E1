@@ -1,0 +1,5 @@
+#title
+
+from tkinter import *
+root=Tk()
+root.title('title to change')
