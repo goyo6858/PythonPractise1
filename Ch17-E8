@@ -1,0 +1,29 @@
+#Ch17-E8 菜单
+
+from tkinter import *
+from tkinter.filedialog import *
+
+#函数
+def open_file():
+  filename=askopenfilename()
+def save_file():
+  return
+def exit():
+  root.destroy()
+
+#窗体
+root=Tk()
+root.title('Menus')
+
+#对象
+menubar1=Menu()
+menubar2=Menu()
+root.configure(menu=menubar1) #窗体上显示菜单
+menu_file=Menu(menubar1,tearoff=0) #tearoff去掉虚线
+menu_file.add_command(label='Open',command=open_file)
+menu_file.add_command(label='Save As',command=save_file)
+menu_file.add_command(label='Exit',command=exit)
+menubar1.add_cascade(label='File',menu=menu_file) #设定显示标签及关联子菜单
+
+#循环
+mainloop()
