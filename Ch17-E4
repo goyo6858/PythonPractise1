@@ -1,4 +1,4 @@
-#Ch17-E4 对话框
+#Ch17-E4 消息框
 
 from tkinter import *
 from tkinter.messagebox import * #必须导入，仅导入tkinter.*不能包含对话框的变量
