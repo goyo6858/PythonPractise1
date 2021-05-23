@@ -9,7 +9,7 @@ def update_timer():
   m_left=time_left//60
   s_left=time_left%60
   lbl_time_left.configure(text='Time left: {}:{:02d}'.format(m_left,s_left))
-  root.after(100,update_timer) #100秒后调用函数？注：第一个参数的单位是毫秒
+  root.after(100,update_timer) #100秒后调用函数？注：第一个参数的单位是毫秒；必要性可能在于时间的变化频率是1秒1次，所以减少函数执行的频次
  
 
 #窗体及对象
