@@ -1,0 +1,29 @@
+#Ch17-E5 关闭/删除对象
+
+from tkinter import *
+from tkinter.messagebox import*
+
+#函数及变量
+def destroy_lbl1():
+  lbl1.destroy()
+  
+def quit_check():
+  useranswer=askquestion(title='Quick Check',message='Close the window?') #消息框返回变量的获取
+  if useranswer=='yes':
+    root.destroy()
+    
+#窗体及对性
+root=Tk()
+root.title='Destroy Objects'
+root.protocol('WM_DELETE_WINDOW',quit_check) #object.protocal;'WM_DELETE_WINDOW'
+
+#对象
+lbl1=Label(text='This label can be destroyed by button')
+btn1=Button(text='Destroy Label',command=destroy_lbl1)
+
+#布局
+lbl1.grid(row=0,column=0)
+btn1.grid(row=0,column=1)
+
+#循环
+mainloop()
