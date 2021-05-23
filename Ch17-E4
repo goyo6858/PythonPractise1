@@ -1,0 +1,44 @@
+#Ch17-E4 对话框
+
+from tkinter import *
+from tkinter.messagebox import * #必须导入，仅导入tkinter.*不能包含对话框的变量
+
+root=Tk()
+root.title='Message boxes'
+
+#函数
+def msg_showinfo():
+  showinfo(title='showinfo',message='This is \'showinfo\' type message box.')
+def msg_okorcancel():
+  askokcancel(title='OK or Cancel',message='This is \'askokcancel\' type message box.') #返回布尔值
+def msg_askquestion():
+  askquestion(title='Ask A Question',message='This is \'askquestion\' type message box.') #返回yes/no字符串
+def msg_askretrycancel():
+  askretrycancel(title='Ask Retry/Cancel',message='This is \'askretrycancel\' type message box.') #返回yes/no字符串
+def msg_askyesnocancel():
+  askyesnocancel(title='Ask Yes/No/Cancel',message='This is \'askyesnocancel\' type message box.') #返回布尔值True,False或None
+def msg_showerror():
+  showerror(title='showerror',message='This is \'showerror\' type message box.') #返回'ok'
+def msg_showwarning():
+  showwarning(title='showwarning',message='This is \'showwarning\' type message box.') #返回'ok'
+  
+#对象
+btn1=Button(text='showinfo',command=msg_showinfo)
+btn2=Button(text='askokcancel',command=msg_okorcancel)
+btn3=Button(text='askquestion',command=msg_askquestion)
+btn4=Button(text='askretrycancel',command=msg_askretrycancel)
+btn5=Button(text='askyesnocancel',command=msg_askyesnocancel)
+btn6=Button(text='showerror',command=msg_showerror)
+btn7=Button(text='warning',command=msg_showwarning)
+
+#布局
+btn1.grid(row=0,column=0)
+btn2.grid(row=0,column=1)
+btn3.grid(row=0,column=2)
+btn4.grid(row=0,column=3)
+btn5.grid(row=0,column=4)
+btn6.grid(row=0,column=5)
+btn7.grid(row=0,column=6)
+
+#循环
+mainloop()
