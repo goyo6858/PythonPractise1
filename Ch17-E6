@@ -1,0 +1,29 @@
+#Ch17-E6 更新
+
+from tkinter import *
+from time import time #注意导入的必要性，time并非Python的关键字
+
+#函数
+def update_timer():
+  time_left=int(90-(time()-start))
+  m_left=time_left//60
+  s_left=time_left%60
+  lbl_time_left.configure(text='Time left: {}:{:02d}'.format(m_left,s_left))
+  root.after(100,update_timer) #100秒后调用函数？注：第一个参数的单位是毫秒
+ 
+
+#窗体及对象
+root=Tk()
+root.title='Update vs. timer'
+
+lbl_time_left=Label()
+
+#布局
+lbl_time_left.grid(row=0,column=0)
+
+#控制
+start=time()
+update_timer()
+
+#循环
+mainloop()
