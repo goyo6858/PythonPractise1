@@ -1,0 +1,21 @@
+#Ch17-E2 禁用对象
+
+from tkinter import *
+
+root=Tk()
+root.title('Disable Objects')
+
+def btn1():
+  lbl1.configure(text='Button1 working now')
+def btn2():
+  btn1.configure(state=NORMAL)
+
+btn1=Button(text='OK', state=DISABLED, command=btn1)
+btn2=Button(text='Enable OK button', command=btn2)
+lbl1=Label()
+
+btn1.grid(row=1,column=0)
+lbl1.grid(row=0,column=0)
+btn2.grid(row=2,column=0)
+
+mainloop()
