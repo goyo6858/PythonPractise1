@@ -1,0 +1,15 @@
+#Ch17-E3 获取组件属性
+
+from tkinter import *
+root=Tk()
+root.title('Get Object Properties')
+
+def get_label_txt_color():
+  s=lbl1.cget('fg')
+  lbl1.configure(text=s)
+
+lbl1=Label(fg='blue')
+btn1=Button(text='Get label text color',command=get_label_txt_color)
+
+lbl1.grid(row=0,column=0)
+btn1.grid(row=1,column=0)
