@@ -1,0 +1,25 @@
+#Ch17-E9 新窗口
+
+from tkinter import *
+
+#函数
+def new_window1():
+  new_window1=Toplevel()
+  new_window1.title('New Window')
+  lbl_nw=Label(new_window1,text='This is a label in new_window1.')
+  lbl_nw.grid()
+
+#窗口
+root=Tk()
+root.title('Main')
+
+#对象
+btn1=Button(text='New window',command=new_window1)
+
+#逻辑
+
+#布局
+btn1.grid()
+
+#循环
+mainloop()
