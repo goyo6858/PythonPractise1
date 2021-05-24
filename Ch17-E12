@@ -1,0 +1,38 @@
+#Ch17-E12 StringVar()
+
+from tkinter import *
+
+#函数
+def lbl_str():
+  global cc
+  s_var.set('Hello' if cc%2==0 else 'Goodbye')
+  if cc%2==0:
+    s='HELLO'
+  else:
+    s='GOODBYE'
+  cc=cc+1
+
+#变量
+cc=0 #电机计数
+s='HELLO'
+
+
+#窗口
+root=Tk()
+root.title('StringVar')
+
+
+#对象及控件变量
+s_var=StringVar()
+s_var.set('Hello')
+lb1=Label(text=s,width=10)
+lb2=Label(textvariable=s_var,width=10)
+btn1=Button(text='Change label text',width=20,command=lbl_str)
+
+#布局
+lb1.grid(row=0,column=0)
+lb2.grid(row=0,column=1)
+btn1.grid(row=1,column=0,columnspan=2)
+
+#循环
+mainloop()
