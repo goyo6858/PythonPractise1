@@ -5,10 +5,14 @@ from tkinter import *
 root=Tk()
 root.title('Pack')
 
-frame1=Frame(height=200,width=200)
-btn1=Button(frame1,text='Button')
+#frame1=Frame(height=200,width=200)
+#btn1=Button(frame1,text='Button')
+btn2=Button(text='Button outside')
+btn3=Button(text='Button on Top')
 
-frame1.grid(row=0,column=0)
-btn1.pack(side=BOTTOM,fill=X,expand=YES) #注意参数值如X,Y都要大写，但无需引号
+#frame1.grid(row=0,column=0)
+#btn1.pack(side=BOTTOM,fill=X,expand=YES) #注意参数值如X,Y都要大写，但无需引号
+btn2.pack(side=BOTTOM,fill=X,expand=YES)
+btn3.pack(side=TOP,fill=X,expand=NO)
 
 mainloop()
