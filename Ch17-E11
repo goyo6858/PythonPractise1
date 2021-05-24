@@ -1,0 +1,14 @@
+#Ch17-E11 pack方法布局
+
+from tkinter import *
+
+root=Tk()
+root.title('Pack')
+
+frame1=Frame(height=200,width=200)
+btn1=Button(frame1,text='Button')
+
+frame1.grid(row=0,column=0)
+btn1.pack(side=BOTTOM,fill=X,expand=YES) #注意参数值如X,Y都要大写，但无需引号
+
+mainloop()
